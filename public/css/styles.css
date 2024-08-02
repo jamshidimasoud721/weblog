@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "BYekan";
+    src: url("../fonts/BYekan-webfont.eot") format("eot"),
+        url("../fonts/BYekan-webfont.woff") format("woff"),
+        url("../fonts/BYekan-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "BYekan" !important;
+}
+
+.custom-file-input ~ .custom-file-label:after{
+    content:'انتخاب عکس' !important;
+}
+
+.active{
+    pointer-events: none;
+}
+
+.fixed {
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    background: darkslategrey;
+    transition: 3s all ease;
+    z-index: 99;
+}

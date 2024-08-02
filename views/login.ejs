@@ -1,0 +1,40 @@
+<div class="text-center d-flex align-items-center justify-content-center w-100">
+    <form class="form-signin" action="/users/login" method="POST">
+        <a href="/">
+            <img class="mb-4" src="/img/laptop.png" alt="" width="72"
+                 height="72">
+        </a>
+        <h1 class="h3 mb-3 font-weight-normal">لطفا وارد شوید</h1>
+
+        <%- include ('./includes/loginMessages.ejs') %>
+
+        <label for="inputEmail" class="sr-only">آدرس ایمیل</label>
+        <input type="email" id="inputEmail" class="form-control mb-2" placeholder="ایمیل" name="email" required
+               autofocus>
+        <label for="inputPassword" class="sr-only">رمز عبور</label>
+        <input type="password" id="inputPassword" class="form-control mb-3" placeholder="رمز عبور" name="password"
+               required>
+        <div class="checkbox mb-3">
+            <label>
+                <input name="remember" type="checkbox" value="remember-me" class="align-middle"> مرا بخاطر بسپار
+            </label>
+        </div>
+        <div class="checkbox mb-3">
+            <a href="/users/register">ثبت نام</a>
+        </div>
+
+        <div class="form-group">
+            <div class="g-recaptcha w-100" data-sitekey="6LcWE9oaAAAAAIKGycs1tEGuHhgwj1Dw8ZvIV4Yi"></div>
+        </div>
+
+        <div class="checkbox mb-3">
+            <a href="/users/forget-password">فراموشی رمز عبور</a>
+        </div>
+
+        <button class="btn btn-lg btn-secondary btn-block" type="submit"><i
+                    class="fa fa-arrow-right mr-1 align-middle"></i>ورود
+        </button>
+        <p class="mt-5 mb-3 text-muted">&copy; 1399-1400</p>
+    </form>
+</div>
+

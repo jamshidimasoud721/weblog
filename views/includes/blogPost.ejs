@@ -1,0 +1,25 @@
+<% if (posts.length > 0){ %>
+    <% for(let post of posts){ %>
+        <div class="col-12">
+            <div class="card mb-5">
+                <img class="card-img-top" src="http://localhost:4000/uploads/thumbnails/<%= post.thumbnail %>"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title"><%= post.title %></h4>
+                    <p class="card-text">
+                        <%- truncate(post.desc, 400) %>
+                    </p>
+                    <a href="/post/<%= post._id %>" class="btn btn-primary">بیشتر</a>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>پست شده در تاریخ : <%= formatDate(post.createdAt) %></p>
+                </div>
+            </div>
+        </div>
+    <% } %>
+<% }else { %>
+    <div class="col-12">
+        <h1 class="alert alert-danger text-center">هیچ پستی وجود ندارد</h1>
+    </div>
+<% } %>
+

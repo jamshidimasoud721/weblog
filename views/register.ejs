@@ -1,0 +1,36 @@
+<div class="text-center w-100  d-flex align-items-center justify-content-center">
+    <form class="form-signin" action="/users/register" method="POST">
+        <a href="/">
+            <img class="mb-4" src="/img/laptop.png" alt="" width="72"
+                 height="72">
+        </a>
+        <h1 class="h3 mb-3 font-weight-normal">ثبت نام کاربر</h1>
+
+        <%- include ('./includes/validationErrors.ejs') %>
+
+        <label for="inputFullName" class="sr-only">نام نام خانوادگی</label>
+        <input type="text" name="fullName" id="inputFullName" class="form-control mb-2" placeholder="نام و نام خانوادگی"
+                autofocus>
+
+        <label for="inputEmail" class="sr-only">آدرس ایمیل</label>
+        <input type="email" name="email" id="inputEmail" class="form-control mb-2" placeholder="ایمیل">
+
+        <label for="inputPassword" class="sr-only">رمز عبور</label>
+        <input type="password" name="password" id="inputPassword" class="form-control mb-2" placeholder=" رمز عبور"
+               >
+
+        <label for="inputConfirmPassword" class="sr-only"> تکرار رمز عبور</label>
+        <input type="password" name="confirmPassword" id="inputConfirmPassword" class="form-control mb-3"
+               placeholder="تکرار رمز عبور" >
+
+        <div class="checkbox mb-3">
+            <a href="/users/login">اکانت کاربری دارم</a>
+        </div>
+
+        <button class="btn btn-lg btn-secondary btn-block" type="submit"><i class="fa fa-sign-in mr-1 align-middle"
+                                                                            aria-hidden="true"></i>ثبت نام
+        </button>
+
+        <p class="mt-5 mb-3 text-muted">&copy; 1399-1400</p>
+    </form>
+</div>
